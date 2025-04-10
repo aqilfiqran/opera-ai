@@ -7,12 +7,16 @@ from response import SalesRepResponse, AIResponse
 from args import AIRequest
 from dotenv import load_dotenv
 import os
+from google import genai
 
 # Load environment variables
 load_dotenv()
 
 # Access variables
 gemini_api_key = os.getenv("GEMINI_API_KEY")
+
+# Initialize the Google Gemini API client
+client = genai.Client(api_key=gemini_api_key)
 
 app = FastAPI(
     title="Opera AI API",
@@ -52,16 +56,20 @@ def get_sales_reps():
     }
 
 @app.post("/api/ai", tags=["AI"], response_model=AIResponse)
-async def ai_endpoint(req: AIRequest):
+def ai_endpoint(req: AIRequest):
     """
     Accepts a user question and returns a AI response.
     """
     user_question = req.question
     
+    response = client.models.generate_content(
+        model="gemini-2.0-flash", contents=user_question
+    )
+
     return {
         "status": 200,
         "message": "AI response generated successfully",
-        "data": f"This is a placeholder answer to your question: {user_question}"
+        "data": response.text,
     }
 
 if __name__ == "__main__":
