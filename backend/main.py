@@ -19,12 +19,17 @@ app.add_middleware(
 with open("dummyData.json", "r") as f:
     DUMMY_DATA = json.load(f)
 
-@app.get("/api/data")
-def get_data():
-    """
-    Returns dummy data (e.g., list of users).
-    """
-    return DUMMY_DATA
+@app.get("/api/sales-reps")
+def get_sales_reps():
+    users = DUMMY_DATA.get("salesReps", [])
+    user_count = len(users)
+
+    return {
+        "status": 200,
+        "message": "Data retrieved successfully",
+        "data": users,
+        "total_data": user_count,
+    }
 
 @app.post("/api/ai")
 async def ai_endpoint(request: Request):
