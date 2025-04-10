@@ -37,7 +37,7 @@ export default function Home() {
         body: JSON.stringify({ question }),
       });
       const data = await response.json();
-      setAnswer(data.answer);
+      setAnswer(data.data);
     } catch (error) {
       console.error("Error in AI request:", error);
     }
