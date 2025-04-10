@@ -5,6 +5,14 @@ import json
 from fastapi.responses import ORJSONResponse
 from response import SalesRepResponse, AIResponse
 from args import AIRequest
+from dotenv import load_dotenv
+import os
+
+# Load environment variables
+load_dotenv()
+
+# Access variables
+gemini_api_key = os.getenv("GEMINI_API_KEY")
 
 app = FastAPI(
     title="Opera AI API",
