@@ -1,5 +1,7 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { useEffect, useState } from "react";
 
 interface User {
@@ -43,7 +45,7 @@ export default function Home() {
 
   return (
     <div style={{ padding: "2rem" }}>
-      <h1 className="text-blue-50">Next.js + FastAPI Sample</h1>
+      <h1 className="text-neutral-900">Next.js + FastAPI Sample</h1>
 
       <section style={{ marginBottom: "2rem" }}>
         <h2>Dummy Data</h2>
@@ -62,14 +64,14 @@ export default function Home() {
 
       <section>
         <h2>Ask a Question (AI Endpoint)</h2>
-        <div>
-          <input
+        <div className="flex flex-row gap-2">
+          <Input
             type="text"
             placeholder="Enter your question..."
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
           />
-          <button onClick={handleAskQuestion}>Ask</button>
+          <Button onClick={handleAskQuestion}>Ask</Button>
         </div>
         {answer && (
           <div style={{ marginTop: "1rem" }}>
