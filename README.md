@@ -6,7 +6,7 @@
 
    - Navigate to the `backend` directory.
    - Create a virtual environment (optional but recommended).
-   - copy the `.env.example` to `.env` and fill in the required environment variables.
+   - Copy the `.env.example` to `.env` and fill in the required environment variables.
    - Install dependencies:
      ```bash
      pip install -r requirements.txt
