@@ -17,10 +17,10 @@ export default function Home() {
   const [answer, setAnswer] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/data")
+    fetch("http://localhost:8000/api/sales-reps")
       .then((res) => res.json())
-      .then((data) => {
-        setUsers(data.users || []);
+      .then((response) => {
+        setUsers(response.data || []);
         setLoading(false);
       })
       .catch((err) => {
