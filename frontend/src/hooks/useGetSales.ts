@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
+import { toast } from 'sonner';
 
 export interface ISale {
   id: number;
@@ -47,6 +48,10 @@ export function useGetSales() {
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       setData([]);
+      toast.error(`Error`, {
+        description: err instanceof Error ? err.message : 'An unknown error occurred',
+        duration: 5000,
+      });
     } finally {
       setLoading(false);
     }

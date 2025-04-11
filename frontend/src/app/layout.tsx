@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 import NextTopLoader from 'nextjs-toploader';
 import Footer from '@/components/organism/Footer';
 import Header from '@/components/organism/Header';
+import { Toaster } from '@/components/ui/sonner';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -38,8 +39,9 @@ export default function RootLayout({
       >
         <NextTopLoader color="#737373" shadow={false} showSpinner={false} />
         <Header />
-        <div className="relative min-h-[calc(100vh-8rem)]">{children}</div>
+        <main className="relative min-h-[calc(100vh-8rem)]">{children}</main>
         <Footer />
+        <Toaster position="top-right" richColors />
       </body>
     </html>
   );

@@ -2,6 +2,7 @@
 
 import { CallbackProps } from '@/lib/types';
 import { useCallback, useState } from 'react';
+import { toast } from 'sonner';
 
 interface AskAiResponse {
   status: number;
@@ -32,6 +33,10 @@ export function useAskAi() {
     } catch (err) {
       callback.onError?.(err as Error);
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
+      toast.error(`Error`, {
+        description: err instanceof Error ? err.message : 'An unknown error occurred',
+        duration: 5000,
+      });
     } finally {
       setLoading(false);
     }
