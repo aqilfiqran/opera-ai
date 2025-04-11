@@ -9,7 +9,7 @@ interface AvatarProps {
 
 export default function Avatar({ src, fallback, className }: AvatarProps) {
   return (
-    <AvatarPrimitive className={className}>
+    <AvatarPrimitive className={className} data-testid="avatar">
       <AvatarImage src={src} />
       <AvatarFallback>{fallback}</AvatarFallback>
     </AvatarPrimitive>
