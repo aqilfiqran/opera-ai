@@ -45,32 +45,47 @@ def get_sales_reps():
     """
     Retrieve all sales representatives.
     """
-    users = DUMMY_DATA.get("salesReps", [])
-    user_count = len(users)
+    try:
+        users = DUMMY_DATA.get("salesReps", [])
+        user_count = len(users)
 
-    return {
-        "status": 200,
-        "message": "Data retrieved successfully",
-        "data": users,
-        "total_data": user_count,
-    }
+        return {
+            "status": 200,
+            "message": "Data retrieved successfully",
+            "data": users,
+            "total_data": user_count,
+        }
+    except FileNotFoundError:
+        return {
+            "status": 500,
+            "message": "File not found",
+            "data": None,
+            "total_data": 0,
+        }
 
 @app.post("/api/ai", tags=["AI"], response_model=AIResponse)
 def ai_endpoint(req: AIRequest):
     """
     Accepts a user question and returns a AI response.
     """
-    user_question = req.question
-    
-    response = client.models.generate_content(
-        model="gemini-2.0-flash", contents=user_question
-    )
+    try:
+        user_question = req.question
+        
+        response = client.models.generate_content(
+            model="gemini-2.0-flash", contents=user_question
+        )
 
-    return {
-        "status": 200,
-        "message": "AI response generated successfully",
-        "data": response.text,
-    }
+        return {
+            "status": 200,
+            "message": "AI response generated successfully",
+            "data": response.text,
+        }
+    except Exception as e:
+        return {
+            "status": 500,
+            "message": f"Error generating AI response: {str(e)}",
+            "data": None,
+        }
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
