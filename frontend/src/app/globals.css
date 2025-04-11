@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -41,6 +41,63 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  --text-dk-h1: 1.625rem;
+  --text-dk-h1--line-height: 2rem;
+  --text-dk-h2: 1.25rem;
+  --text-dk-h2--line-height: 1.75rem;
+  --text-dk-h3: 1.125rem;
+  --text-dk-h3--line-height: 1.5rem;
+  --text-dk-h4: 0.875rem;
+  --text-dk-h4--line-height: 1.25rem;
+  --text-dk-h5: 0.8125rem;
+  --text-dk-h5--line-height: 1.125rem;
+  --text-dk-h6: 0.75rem;
+  --text-dk-h6--line-height: 1rem;
+  --text-dk-xl: 1.063rem;
+  --text-dk-xl--line-height: 1.5rem;
+  --text-dk-lg: 1rem;
+  --text-dk-lg--line-height: 1.5rem;
+  --text-dk-md: 0.938rem;
+  --text-dk-md--line-height: 1.35rem;
+  --text-dk-sm: 0.875rem;
+  --text-dk-sm--line-height: 1.25rem;
+  --text-dk-xs: 0.813rem;
+  --text-dk-xs--line-height: 1.15rem;
+  --text-dk-cxs: 0.75rem;
+  --text-dk-cxs--line-height: 1rem;
+  --text-dk-xxs: 0.688rem;
+  --text-dk-xxs--line-height: 0.95rem;
+  --text-dk-xxxs: 0.625rem;
+  --text-dk-xxxs--line-height: 0.85rem;
+  --text-mb-h1: 1.5rem;
+  --text-mb-h1--line-height: 2rem;
+  --text-mb-h2: 1.25rem;
+  --text-mb-h2--line-height: 1.75rem;
+  --text-mb-h3: 1.125rem;
+  --text-mb-h3--line-height: 1.5rem;
+  --text-mb-h4: 1rem;
+  --text-mb-h4--line-height: 1.35rem;
+  --text-mb-h5: 0.875rem;
+  --text-mb-h5--line-height: 1.25rem;
+  --text-mb-h6: 0.8125rem;
+  --text-mb-h6--line-height: 1.15rem;
+  --text-mb-xl: 1.125rem;
+  --text-mb-xl--line-height: 1.5rem;
+  --text-mb-lg: 1rem;
+  --text-mb-lg--line-height: 1.35rem;
+  --text-mb-md: 0.875rem;
+  --text-mb-md--line-height: 1.25rem;
+  --text-mb-sm: 0.8125rem;
+  --text-mb-sm--line-height: 1.15rem;
+  --text-mb-xs: 0.75rem;
+  --text-mb-xs--line-height: 1rem;
+  --text-mb-cxs: 0.6875rem;
+  --text-mb-cxs--line-height: 0.95rem;
+  --text-mb-xxs: 0.688rem;
+  --text-mb-xxs--line-height: 0.95rem;
+  --text-mb-xxxs: 0.625rem;
+  --text-mb-xxxs--line-height: 0.85rem;
 }
 
 :root {
