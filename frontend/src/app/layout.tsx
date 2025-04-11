@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import NextTopLoader from 'nextjs-toploader';
+import Footer from '@/components/organism/Footer';
+import Header from '@/components/organism/Header';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -35,7 +37,9 @@ export default function RootLayout({
         )}
       >
         <NextTopLoader color="#737373" shadow={false} showSpinner={false} />
-        <div className="relative z-10">{children}</div>
+        <Header />
+        <div className="relative min-h-[calc(100vh-8rem)]">{children}</div>
+        <Footer />
       </body>
     </html>
   );

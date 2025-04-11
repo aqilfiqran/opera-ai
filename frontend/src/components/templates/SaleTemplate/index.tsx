@@ -14,8 +14,10 @@ export default function SaleTemplate() {
 
   return (
     <Container className="flex flex-col gap-3 py-5">
-      <Text variant="h1">Sales List</Text>
-      <section className="pb-16">
+      <Text variant="xl" as="h2">
+        Sales List
+      </Text>
+      <section>
         {loading ?
           <div className="flex h-96 items-center justify-center">
             <Spinner className="text-primary size-10" />
