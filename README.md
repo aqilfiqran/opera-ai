@@ -28,3 +28,14 @@
      npm run dev
      ```
    - Open `http://localhost:3000` to view your Next.js app.
+
+## Unit Tests
+
+- For the backend, navigate to the `backend` directory and run:
+  ```bash
+  pytest test_main.py -v
+  ```
+- For the frontend, navigate to the `frontend` directory and run:
+  ```bash
+  npm test
+  ```
