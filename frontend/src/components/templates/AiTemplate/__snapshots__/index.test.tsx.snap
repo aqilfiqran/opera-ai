@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AiTemplate renders correctly in initial state 1`] = `
+<DocumentFragment>
+  <div
+    class="mx-auto w-full px-3 sm:max-w-[540px] md:max-w-[720px] md:px-0 flex flex-col gap-3 py-5"
+  >
+    <div
+      class="flex flex-col"
+    >
+      <h2
+        class="text-mb-xl tracking-2 lg:text-dk-xl font-sans"
+      >
+        Opera AI
+      </h2>
+      <h3
+        class="tracking-2 lg:text-dk-md font-sans font-normal text-neutral-500"
+      >
+        AI-powered sales assistant for Opera. Ask me anything about Opera, sales, or AI!
+      </h3>
+    </div>
+    <div
+      class="fixed right-4 bottom-5 left-4 flex justify-center"
+    >
+      <div
+        class="flex w-full cursor-text border text-neutral-500 has-[input:disabled]:cursor-not-allowed has-[input:disabled]:bg-neutral-200 has-[input:disabled]:text-neutral-700 has-[input:focus-visible]:ring-primary has-[input:focus-visible]:ring-1 rounded-full border-neutral-500 bg-neutral-200 transition-all duration-200 ease-in-out max-w-xs has-[input:focus-visible]:max-w-full md:has-[input:focus-visible]:max-w-lg"
+        role="button"
+        tabindex="0"
+      >
+        <input
+          class="text-dark flex font-medium transition-colors disabled:cursor-not-allowed disabled:bg-neutral-200 disabled:text-neutral-400 disabled:placeholder:text-neutral-600 focus-visible:outline-none w-full px-2 py-1.5 rounded-full bg-neutral-200 pl-5 placeholder:text-neutral-400"
+          data-slot="input"
+          placeholder="ask AI. press '/' to focus"
+          type="text"
+          value=""
+        />
+        <div
+          class="py-1.5 pr-2"
+        >
+          <div
+            class="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-neutral-500 transition-colors hover:bg-neutral-600"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              class="lucide lucide-arrow-up text-neutral-200"
+              fill="none"
+              height="16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m5 12 7-7 7 7"
+              />
+              <path
+                d="M12 19V5"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AiTemplate renders correctly in loading state 1`] = `
+<DocumentFragment>
+  <div
+    class="mx-auto w-full px-3 sm:max-w-[540px] md:max-w-[720px] md:px-0 flex flex-col gap-3 py-5"
+  >
+    <div
+      class="flex flex-col"
+    >
+      <h2
+        class="text-mb-xl tracking-2 lg:text-dk-xl font-sans"
+      >
+        Opera AI
+      </h2>
+      <h3
+        class="tracking-2 lg:text-dk-md font-sans font-normal text-neutral-500"
+      >
+        AI-powered sales assistant for Opera. Ask me anything about Opera, sales, or AI!
+      </h3>
+    </div>
+    <div
+      class="fixed right-4 bottom-5 left-4 flex justify-center"
+    >
+      <div
+        class="flex w-full cursor-text border text-neutral-500 has-[input:disabled]:cursor-not-allowed has-[input:disabled]:bg-neutral-200 has-[input:disabled]:text-neutral-700 has-[input:focus-visible]:ring-primary has-[input:focus-visible]:ring-1 rounded-full border-neutral-500 bg-neutral-200 transition-all duration-200 ease-in-out max-w-xs has-[input:focus-visible]:max-w-full md:has-[input:focus-visible]:max-w-lg"
+        role="button"
+        tabindex="0"
+      >
+        <input
+          class="text-dark flex font-medium transition-colors disabled:cursor-not-allowed disabled:bg-neutral-200 disabled:text-neutral-400 disabled:placeholder:text-neutral-600 focus-visible:outline-none w-full px-2 py-1.5 rounded-full bg-neutral-200 pl-5 placeholder:text-neutral-400"
+          data-slot="input"
+          placeholder="ask AI. press '/' to focus"
+          type="text"
+          value=""
+        />
+        <div
+          class="py-1.5 pr-2"
+        >
+          <div
+            class="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-neutral-500 transition-colors hover:bg-neutral-600"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              class="lucide lucide-arrow-up text-neutral-200"
+              fill="none"
+              height="16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m5 12 7-7 7 7"
+              />
+              <path
+                d="M12 19V5"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AiTemplate renders correctly with answer 1`] = `
+<DocumentFragment>
+  <div
+    class="mx-auto w-full px-3 sm:max-w-[540px] md:max-w-[720px] md:px-0 flex flex-col gap-3 py-5"
+  >
+    <div
+      class="flex flex-col"
+    >
+      <h2
+        class="text-mb-xl tracking-2 lg:text-dk-xl font-sans"
+      >
+        Opera AI
+      </h2>
+      <h3
+        class="tracking-2 lg:text-dk-md font-sans font-normal text-neutral-500"
+      >
+        AI-powered sales assistant for Opera. Ask me anything about Opera, sales, or AI!
+      </h3>
+    </div>
+    <section
+      class="flex flex-col gap-1 animate-fade-in-down duration-500 ease-in-out"
+    >
+      <p
+        class="tracking-2 lg:text-dk-sm font-sans text-primary font-bold"
+      >
+        Response
+      </p>
+      <div
+        class="relative rounded-lg border border-neutral-300 bg-white p-4 shadow-md"
+      >
+        <div
+          data-testid="markdown"
+        >
+          This is a test answer
+        </div>
+      </div>
+    </section>
+    <div
+      class="fixed right-4 bottom-5 left-4 flex justify-center"
+    >
+      <div
+        class="flex w-full cursor-text border text-neutral-500 has-[input:disabled]:cursor-not-allowed has-[input:disabled]:bg-neutral-200 has-[input:disabled]:text-neutral-700 has-[input:focus-visible]:ring-primary has-[input:focus-visible]:ring-1 rounded-full border-neutral-500 bg-neutral-200 transition-all duration-200 ease-in-out max-w-xs has-[input:focus-visible]:max-w-full md:has-[input:focus-visible]:max-w-lg"
+        role="button"
+        tabindex="0"
+      >
+        <input
+          class="text-dark flex font-medium transition-colors disabled:cursor-not-allowed disabled:bg-neutral-200 disabled:text-neutral-400 disabled:placeholder:text-neutral-600 focus-visible:outline-none w-full px-2 py-1.5 rounded-full bg-neutral-200 pl-5 placeholder:text-neutral-400"
+          data-slot="input"
+          placeholder="ask AI. press '/' to focus"
+          type="text"
+          value="Test question"
+        />
+        <div
+          class="py-1.5 pr-2"
+        >
+          <div
+            class="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-neutral-500 transition-colors hover:bg-neutral-600"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              class="lucide lucide-arrow-up text-neutral-200"
+              fill="none"
+              height="16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m5 12 7-7 7 7"
+              />
+              <path
+                d="M12 19V5"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
