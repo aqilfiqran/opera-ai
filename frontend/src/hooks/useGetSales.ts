@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
-interface ISale {
+export interface ISale {
   id: number;
   name: string;
   role: string;
