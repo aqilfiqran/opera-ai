@@ -5,12 +5,13 @@ import Text from '@/components/atoms/Text';
 import InputQuestion from '@/components/molecules/InputQuestion';
 import TextMarkdown from '@/components/molecules/TextMarkdown';
 import { useAskAi } from '@/hooks/useAskAi';
+import { cn } from '@/lib/utils';
 import { useState } from 'react';
 
 export default function AiTemplate() {
   const [question, setQuestion] = useState('');
   const [answer, setAnswer] = useState('');
-  const { trigger } = useAskAi();
+  const { trigger, loading } = useAskAi();
 
   const handleAskQuestion = async () => {
     trigger(question, {
@@ -34,19 +35,27 @@ export default function AiTemplate() {
       </div>
 
       {!!answer && (
-        <section className="flex flex-col gap-1 pb-16">
+        <section className={cn("flex flex-col gap-1 pb-16",
+          // transition from top to bottom when answer is loaded
+          "animate-fade-in-down duration-500 ease-in-out",
+        )}>
           <Text variant="sm" className="text-primary font-bold">
             Response
           </Text>
-          <div className="rounded-lg border border-neutral-300 bg-white p-4 shadow-md">
+          <div className="rounded-lg border border-neutral-300 bg-white p-4 shadow-md relative">
             {/* markdown format support */}
             <TextMarkdown text={answer} />
           </div>
         </section>
       )}
 
-      <div className="fixed right-4 bottom-5 left-4 flex justify-center">
-        <InputQuestion value={question} onChange={e => setQuestion(e.target.value)} onValueSubmit={handleAskQuestion} />
+      <div className="fixed right-4 bottom-5 left-4 flex justify-center ">
+        <InputQuestion
+          value={question}
+          onChange={e => setQuestion(e.target.value)}
+          onValueSubmit={handleAskQuestion}
+          loading={loading}
+        />
       </div>
     </Container>
   );

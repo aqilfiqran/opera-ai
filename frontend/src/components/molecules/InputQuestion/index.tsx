@@ -1,13 +1,21 @@
 import Input, { InputProps } from '@/components/atoms/Input';
+import Spinner from '@/components/atoms/Spinner';
 import { cn } from '@/lib/utils';
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 
 interface InputQuestionProps extends Omit<InputProps, 'rightSection' | 'leftSection' | 'onSubmit'> {
   onValueSubmit?: () => void;
+  loading?: boolean;
 }
 
-export default function InputQuestion({ wrapperClassName, className, onValueSubmit, ...props }: InputQuestionProps) {
+export default function InputQuestion({
+  wrapperClassName,
+  className,
+  onValueSubmit,
+  loading,
+  ...props
+}: InputQuestionProps) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -33,6 +41,11 @@ export default function InputQuestion({ wrapperClassName, className, onValueSubm
     };
   }, []);
 
+  const handleValueSubmit = () => {
+    if (loading) return;
+    onValueSubmit?.();
+  };
+
   return (
     <Input
       type="text"
@@ -43,7 +56,7 @@ export default function InputQuestion({ wrapperClassName, className, onValueSubm
         if (e.key === 'Enter') {
           e.preventDefault();
           // trigger the onChange event
-          onValueSubmit?.();
+          handleValueSubmit();
         }
       }}
       wrapperClassName={cn(
@@ -60,9 +73,11 @@ export default function InputQuestion({ wrapperClassName, className, onValueSubm
           className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-neutral-500 transition-colors hover:bg-neutral-600"
           role="button"
           tabIndex={0}
-          onClick={onValueSubmit}
+          onClick={handleValueSubmit}
         >
-          <ArrowUp className="text-neutral-200" size={16} />
+          {loading ?
+            <Spinner  />
+          : <ArrowUp className="text-neutral-200" size={16} />}
         </div>
       }
     />
