@@ -65,7 +65,12 @@
       "^@/(.*)$": "<rootDir>/src/$1"
     },
     "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+      "^.+\\.(js|jsx|ts|tsx)$": [
+        "babel-jest",
+        {
+          "configFile": "./babel.config.jest.js"
+        }
+      ]
     },
     "setupFilesAfterEnv": [
       "<rootDir>/jest.setup.js"
