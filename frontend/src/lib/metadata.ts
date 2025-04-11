@@ -67,7 +67,6 @@ export default function populateMetaData({
   other,
   canonical,
   imageSnippet,
-  robots,
   url,
 }: Meta) {
   const result = { ...initMeta };

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
+import NextTopLoader from 'nextjs-toploader';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -33,7 +34,7 @@ export default function RootLayout({
           geistMono.variable
         )}
       >
-        <div className="dashboard-pattern absolute inset-0 z-0 opacity-[0.03]"></div>
+        <NextTopLoader color="#737373" shadow={false} showSpinner={false} />
         <div className="relative z-10">{children}</div>
       </body>
     </html>
